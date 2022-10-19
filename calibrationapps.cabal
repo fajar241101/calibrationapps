@@ -1,0 +1,68 @@
+cabal-version:      2.4
+name:               calibrationapps
+version:            0.1.0.0
+
+-- A short (one-line) description of the package.
+-- synopsis: INSTRUMENT/ EQUIPMENT CALIBRATION RECOMMENDER NOTIFIER
+
+-- A short (one-line) description of the package.
+-- synopsis: INSTRUMENT/ EQUIPMENT CALIBRATION RECOMMENDER NOTIFIER
+
+-- A longer description of the package.
+-- description: Instrument/ Equipment Calibration Recommender Notifier is Application to Evaluated
+-- Instrument/ Equipment post checking or workshop calibration which cross referenced with Equipment Main Database
+-- to evaluate and validate the observation operating behaviour characteristic of target Instrument/ Equipment 
+-- and get Further Recommendation Notification (1-Pass Calibration, 2-Required further Recalibration, 3-Defective Instrument/Equipment)
+-- Equipment Main Database will be saved in  "instrumentdb.txt" file
+-- Observation Logs Report saved in "calibrationobservationlog.txt",  which contain Instrument/ Equipment Name, Operating Observation Behaviour
+-- Characteristic, and date of registered. 
+-- Further Application will check and validate the observation report  through comparation Main Database to identify the recommended strategy
+-- Future ongoing works : integration with IPFS, Integration with AI - Aggregated Anomaly & Drift Detection Model, Blockchain dBFT Validator
+--                        Front End Development in Web3/ Android/ IOS
+
+-- A URL where users can report bugs.
+-- bug-reports: Bugs report could send through github comments or email mf.fajarramadhan.sh@gmail.com
+
+-- The license under which the package is released.
+-- license: MIT
+
+-- The package author(s).
+-- author: MF Fajar Ramadhan SH
+
+-- An email address to which users can send suggestions, bug reports, and patches.
+-- maintainer: mf.fajarramadhan.sh@gmail.com
+
+author:             MF Fajar Ramadhan SH 
+maintainer:         https://github.com/fajar241101/calibrationapps
+
+-- A copyright notice.
+-- copyright: 
+-- category : Calibration Recommender Notifier
+extra-source-files: CHANGELOG.md
+
+library
+    exposed-modules:  MyLib
+
+    -- Modules included in this library but not exported.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:    base ^>=4.16.3.0, time ^>=1.11.1.1, ansi-terminal ^>=0.11.3
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable calibrationapps
+    main-is:          Main.hs
+
+    -- Modules included in this executable, other than Main.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:
+        base ^>=4.16.3.0, time ^>=1.11.1.1, ansi-terminal ^>=0.11.3,
+        calibrationapps
+
+    hs-source-dirs:   app
+    default-language: Haskell2010
