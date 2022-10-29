@@ -83,9 +83,9 @@ calibTypeMax_list :: [ObservationRegisteredByName] -> String
 calibTypeMax_list [(n,s,c,q,v)] = q
 calibTypeMax_list ((n1,s1,c1,q1,v1):(n2,s2,c2,q2,v2):xs) = if (c1 > c2) then calibTypeMax_list ((n1,s1,c1,q1,v1):xs) else calibTypeMax_list((n2,s2,c2,q2,v2):xs)
 
-circularproductMax_listGraph :: [ObservationRegisteredByName] -> String
-circularproductMax_listGraph [(n,s,c,q,v)] = "\n Instrument/Equipment:  " ++ n  ++ "\n -- Asset Type: " ++ v ++ "\n -- Calibration Recommendation: " ++ q ++ ";" ++ "\n "
-circularproductMax_listGraph ((n1,s1,c1,q1,v1):(n2,s2,c2,q2,v2):xs) = if (c1 > c2) then circularproductMax_listGraph ((n1,s1,c1,q1,v1):xs) else circularproductMax_listGraph((n2,s2,c2,q2,v2):xs)
+calibproductMax_listGraph :: [ObservationRegisteredByName] -> String
+calibproductMax_listGraph [(n,s,c,q,v)] = "\n Instrument/Equipment:  " ++ n  ++ "\n -- Asset Type: " ++ v ++ "\n -- Calibration Recommendation: " ++ q ++ ";" ++ "\n "
+calibproductMax_listGraph ((n1,s1,c1,q1,v1):(n2,s2,c2,q2,v2):xs) = if (c1 > c2) then calibproductMax_listGraph ((n1,s1,c1,q1,v1):xs) else calibproductMax_listGraph((n2,s2,c2,q2,v2):xs)
 
 
 -- Function That converts DATA-STRING to DATA-DAY
@@ -207,7 +207,7 @@ graph :: [ObsLog] -> [InstrumentDatabase] -> String
 graph [] [] = ""
 graph _ [] = ""
 graph [] _ = ""
-graph ((xn,xd,xp):xs) y = circularproductMax_listGraph (calibTypecompareEquCharAllByName xn ((xn,xd,xp):xs) y) ++ graph xs y
+graph ((xn,xd,xp):xs) y = calibproductMax_listGraph (calibTypecompareEquCharAllByName xn ((xn,xd,xp):xs) y) ++ graph xs y
 
 
 -- Main function that contains all the actions of the program

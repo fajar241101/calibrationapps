@@ -3,26 +3,20 @@ name:               calibrationapps
 version:            0.1.0.0
 
 -- A short (one-line) description of the package.
--- synopsis: INSTRUMENT/ EQUIPMENT CALIBRATION RECOMMENDER NOTIFIER
-
--- A short (one-line) description of the package.
--- synopsis: INSTRUMENT/ EQUIPMENT CALIBRATION RECOMMENDER NOTIFIER
-
+-- synopsis: SMART ASSET INTEGRITY RECOMMENDER NOTIFIER DECENTRALIZED APPLICATION
 -- A longer description of the package.
--- description: Instrument/ Equipment Calibration Recommender Notifier is Application to Evaluated
--- Instrument/ Equipment post checking or workshop calibration which cross referenced with Equipment Main Database
--- to evaluate and validate the observation operating behaviour characteristic of target Instrument/ Equipment 
+-- description: Smart Asset Integrity Recommender Notifier is Application to Evaluated, Verified, and Validated
+-- Plant Instrument, Equipment, or Asset post Preventive Maintenance which cross referenced with Plant Asset Integrity Main Database
+-- to evaluate, verified and validate the observation operating behaviour characteristic of target Instrument/ Equipment/Assets 
 -- and get Further Recommendation Notification (1-Pass Calibration, 2-Required further Recalibration, 3-Defective Instrument/Equipment)
--- Equipment Main Database will be saved in  "instrumentdb.txt" file
--- Observation Logs Report saved in "calibrationobservationlog.txt",  which contain Instrument/ Equipment Name, Operating Observation Behaviour
--- Characteristic, and date of registered. 
+-- Equipment Main Database will be saved in  "AssetIntegrityMainDb.csv" file
+-- Observation Logs Report saved in "AssetObservationLog.csv",  which contain Instrument/ Equipment/ Asset Name, Operating Observation 
+-- Behaviour Characteristic, and date of registered. 
 -- Further Application will check and validate the observation report  through comparation Main Database to identify the recommended strategy
 -- Future ongoing works : integration with IPFS, Integration with AI - Aggregated Anomaly & Drift Detection Model, Blockchain dBFT Validator
 --                        Front End Development in Web3/ Android/ IOS
-
 -- A URL where users can report bugs.
 -- bug-reports: Bugs report could send through github comments or email mf.fajarramadhan.sh@gmail.com
-
 -- The license under which the package is released.
 -- license: MIT
 

@@ -1,0 +1,5 @@
+Level-Transmitter-Oil       used-product,2-pct-accuracy,3-pct-repeatability         2022-10-09
+Vibration-Sensor     	    used-product,2-pct-accuracy,5-pct-repeatability         2022-10-09
+Flow-Transmitter-Oil        used-product,2-pct-accuracy,5-pct-repeatability         2022-10-10
+Injection-Pump-Acid         used-product,no-flow                                    2022-10-15
+Pressure-Transmitter-Water	used-product,2-pct-accuracy,3-pct-repeatability	        2022-10-18
